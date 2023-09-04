@@ -1,4 +1,4 @@
-package us.tpauline.umdtestudo.scheduleofclasses.Major;
+package us.tpauline.scheduleofclasses.Major;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
