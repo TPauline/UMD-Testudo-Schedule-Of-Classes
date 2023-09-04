@@ -1,16 +1,16 @@
 package us.tpauline.scheduleofclasses.Major;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import org.springframework.stereotype.Service;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+// import org.springframework.web.bind.annotation.PathVariable;
+// import org.springframework.web.bind.annotation.RequestBody;
+// import org.springframework.web.bind.annotation.RequestMapping;
+// import org.springframework.web.bind.annotation.RequestMethod;
+// import org.springframework.web.bind.annotation.RestController;
 
 @Service //marks class as spring business service
 public class MajorService {
@@ -61,7 +61,7 @@ public class MajorService {
     }
 
     public Major getMajor(String id){
-       return null;
+       return majorRepository.findOne(id);
     }
 
     public void addMajor(Major major) {
@@ -69,11 +69,11 @@ public class MajorService {
     }
 
     public void updateMajor(Major major, String id){
-        
+        majorRepository.save(major);
     }
 
 
      public void deleteMajor(String id){
-         
+         majorRepository.delete(id);
     }
 }
