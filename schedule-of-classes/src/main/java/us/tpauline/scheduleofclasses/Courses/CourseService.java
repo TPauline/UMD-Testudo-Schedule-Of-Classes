@@ -28,12 +28,12 @@ public class CourseService {
        return courseRepository.findOne(id);
     }
 
-    public void addCourse(Course major) {
-        courseRepository.save(major);
+    public void addCourse(Course course) {
+        courseRepository.save(course);
     }
 
-    public void updateCourse(Course major, String id){
-        courseRepository.save(major);
+    public void updateCourse(Course course, String id){
+        courseRepository.save(course);
     }
 
 
